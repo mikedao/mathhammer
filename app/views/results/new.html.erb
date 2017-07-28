@@ -1,0 +1,35 @@
+<h1>Mathhammer</h1>
+
+
+<%= form_for :result do |f| %>
+  <p><b>Attacker</b></p>
+  <%= f.label :shots %>
+  <%= f.text_field  :attacker_shots %>
+
+  <%= f.label :Ballistic_Skill %>
+  <%= f.text_field  :ballistic_skill %>
+
+  <%= f.label :strength %>
+  <%= f.text_field  :strength %>
+
+  <%= f.label :AP %>
+  <%= f.select :AP, ["-1", "-2", "-3", "-4", "-5"]  %>
+
+  <%= f.label :reroll_shots %>
+  <%= f.select :reroll_shots, ["None", "All", "Ones"]  %>
+
+  <%= f.label :reroll_wounds %>
+  <%= f.select :reroll_wounds, ["None", "All", "Ones"]  %>
+
+  <p><b>Defender</b></p>
+
+  <%= f.label :toughess %>
+  <%= f.text_field :toughness %>
+
+  <%= f.label :save %>
+  <%= f.text_field :save %>
+
+  <%= f.label :invuln %>
+  <%= f.text_field :invuln %>
+  <p><%= f.submit %></p>
+<% end %>
