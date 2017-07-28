@@ -1,7 +1,7 @@
 <h1>Mathhammer</h1>
 
 
-<%= form_for :result do |f| %>
+<%= form_for :result, url: results_path do |f| %>
   <p><b>Attacker</b></p>
   <%= f.label :shots %>
   <%= f.text_field  :attacker_shots %>
@@ -13,7 +13,7 @@
   <%= f.text_field  :strength %>
 
   <%= f.label :AP %>
-  <%= f.select :AP, ["-1", "-2", "-3", "-4", "-5"]  %>
+  <%= f.select :AP, ["0", "-1", "-2", "-3", "-4", "-5"]  %>
 
   <%= f.label :reroll_shots %>
   <%= f.select :reroll_shots, ["None", "All", "Ones"]  %>
